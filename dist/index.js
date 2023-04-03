@@ -1,11 +1,12 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('prop-types'), require('react')) :
     typeof define === 'function' && define.amd ? define(['exports', 'prop-types', 'react'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.b8ui = {}, null, global.React));
-})(this, (function (exports, propTypes, React) { 'use strict';
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.b8ui = {}, global.PropTypes, global.React));
+})(this, (function (exports, PropTypes, React) { 'use strict';
 
     function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
+    var PropTypes__default = /*#__PURE__*/_interopDefaultLegacy(PropTypes);
     var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 
     const Select = props => {
@@ -57,6 +58,13 @@
         key: `${key}-${index}`,
         onClick: () => onItemClick(key, value)
       }, key)))))));
+    };
+    Select.propTypes = {
+      label: PropTypes__default["default"].string,
+      labelSelector: PropTypes__default["default"].string,
+      options: PropTypes__default["default"].object,
+      selectHeight: PropTypes__default["default"].string,
+      onSelect: PropTypes__default["default"].func
     };
     const Arrow = props => /*#__PURE__*/React__default["default"].createElement("svg", {
       width: "15",

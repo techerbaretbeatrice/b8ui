@@ -2,6 +2,12 @@
 
 UI library
 
+# How to install?
+
+```
+npm install b8ui
+```
+
 ## components
 
 ### Button

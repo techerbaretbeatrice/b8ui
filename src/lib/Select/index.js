@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types'
-
 import React, { useState } from 'react'
-
 import "./style.css"
 
 
@@ -60,6 +58,14 @@ const Select = (props) => {
         </div>
     </div>
     </>
+}
+
+Select.propTypes = {
+    label: PropTypes.string,
+    labelSelector: PropTypes.string,
+    options: PropTypes.object,
+    selectHeight: PropTypes.string,
+    onSelect: PropTypes.func
 }
 
 const Arrow = (props) =>
